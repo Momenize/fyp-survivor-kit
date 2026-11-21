@@ -10,7 +10,7 @@ end;
 
 architecture behavior of dff is
 begin
-    process
+    process(clk)
     begin
         if(clk'event and clk = '1') then
             q <= d;
