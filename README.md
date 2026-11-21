@@ -55,7 +55,7 @@ chmod +x simu.sh
 
 Pass your entity file and testbench file using the --enti and --tb flags:
 ```bash
-./simu.sh --enti src/halfadder.vhd --tb src/halfadder_tb.vhd
+./simu.sh --enti src/adders/halfadder/halfadder.vhd --tb src/adders/halfadder/halfadder_tb.vhd
 ```
 The script will:
 
