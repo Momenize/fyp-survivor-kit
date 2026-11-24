@@ -58,15 +58,15 @@ echo " Top Entity:     $TB_ENTITY_NAME"
 echo "=========================================="
 
 # Analyze
-ghdl -a --workdir=simulation "$ENTITY_FILE" "$TB_FILE"
+ghdl -a --ieee=synopsys --workdir=simulation "$ENTITY_FILE" "$TB_FILE"
 
 echo " [2/4] Elaborating design..."
 # Elaborate
-ghdl -e --workdir=simulation "$TB_ENTITY_NAME"
+ghdl -e --ieee=synopsys --workdir=simulation "$TB_ENTITY_NAME"
 
 echo " [3/4] Running simulation..."
 # Run Simulation
-ghdl -r --workdir=simulation "$TB_ENTITY_NAME" --vcd="simulation/${TB_ENTITY_NAME}.vcd"
+ghdl -r --ieee=synopsys --workdir=simulation "$TB_ENTITY_NAME" --vcd="simulation/${TB_ENTITY_NAME}.vcd"
 
 echo "=========================================="
 echo " Success! Waveform saved to simulation/${TB_ENTITY_NAME}.vcd"
