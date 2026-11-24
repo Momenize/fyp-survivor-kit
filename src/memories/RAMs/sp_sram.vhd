@@ -17,7 +17,7 @@ end entity sp_sram;
 
 architecture rtl of sp_sram is
   type ram_type is array (0 to DEPTH-1) of std_logic_vector(DATA_WIDTH-1 downto 0);
-  signal ram : ram_type := (others => (others => '0'));
+  signal ram : ram_type := (others => (others => 'Z'));
 begin
     process(clk)
     begin
