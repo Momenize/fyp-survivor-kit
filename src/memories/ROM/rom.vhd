@@ -44,7 +44,7 @@ begin
   begin
     -- Asynchronous reset: checked before the clock edge
     if reset = '1' then
-      data <= (others => '0');
+      data <= (others => 'Z');
     -- Low-edge-sensitive clock
     elsif falling_edge(clk) then
       -- Synchronous enable: checked after the clock edge
